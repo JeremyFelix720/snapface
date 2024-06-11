@@ -1,0 +1,6 @@
+<div>
+    <h2>Formatage des nombres</h2>
+    <p>Un grand nombre : {{largeNumber | number: '1.0-0'}}</p> <!--'1.0-0' sert à arrondir le nombre à l'inférieur ou au supérieur (selon la valeur des chiffres après la décimale) mais on peut s'en passer et ne rien mettre à la place !-->
+    <p>Un nombre entre 0 et 1 transformé en pourcentage : {{percentageNumber | percent: '1.0-2'}}</p>
+    <p>Une valeur de monnaie formatée : {{moneyNumber | currency: 'EUR'}}</p> <!--OU " currency: 'EUR' : 'code' " pour afficher le code "EUR" à la place du symbole "€"-->
+</div>

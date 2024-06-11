@@ -1,0 +1,1 @@
+export type SnapType = "snap" | "unsnap"; // Permet de faire la différence entre un snap ou un unsnap dans la méthode qui les gère (et d'avoir une seule méthode plutôt que deux)

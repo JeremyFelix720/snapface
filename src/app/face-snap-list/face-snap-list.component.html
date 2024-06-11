@@ -1,0 +1,9 @@
+<div class="facesnap-section">
+
+    <!--Le Control Flow Block @for et @else permet de boucler sur un tableau de valeurs (string, number, components, etc.) et de les afficher les uns après les autres-->
+    @for (faceSnap of faceSnapArray; track $index) {
+        <!--Toutes les instances de chaque composant sont indépendantes (les interactions avec un composant n'influe que sur celui-ci)-->
+        <app-face-snap [faceSnap]="faceSnap" />
+    }
+
+</div>

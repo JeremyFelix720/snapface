@@ -1,0 +1,22 @@
+
+<!--Le paramettre "ngClass" (combiné à la directive du même nom importé dans le fichier ts) permet d'ajouter ou de retirer une classe (ici : "snapped") si la condition indiquée est remplie ou pas (ici : "userHasSnapped === true")-->
+<div class="face-snap-card" [ngClass]="{ snapped: userHasSnaped, popular: faceSnap.snaps>50}">
+    <h2> {{faceSnap.title | uppercase}} </h2>
+    <p class="date">FaceSnap mis en ligne le : {{faceSnap.createdAt | date:'dd/MM/yyyy à h:mm'}}</p>
+
+    <!--Les Control Flow Blocks @if et @else permettent de gérer de l'affichage conditionnel d'éléments du DOM-->
+    @if (faceSnap.location) {
+        <p>Localisation : {{faceSnap.location}}</p>
+    } @else {
+        <p>Localisation non-spécifiée</p>
+    }
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+    <p>{{faceSnap.description}}</p>
+
+    <!--Le paramettre "ngStyle" (combiné à la directive du même nom importé dans le fichier ts) permet de modifier dynamiquement le style en fonction des valeurs des attribus du composant "FaceSnap" ; ici, plus une FaceSnap a un nombre de snaps important, plus ce nombre passe du noir au vert-->
+    <p>Nombre de snaps : <span [ngStyle]="{ color:'rgb(0, ' + faceSnap.snaps + ', 0)'}">{{ faceSnap.snaps }}</span></p>
+
+    <button (click)="onSnap()">{{snapButtonContent}}</button> <!-- La liaison par évenement "event binding" permet d'enclencher la méthode appelée "onAddSnap()" lors de l'evenement "click" sur l'élément "button"-->
+</div>
+
+<button routerLink="/facesnaps">Retour vers la liste</button> <!--Attention à bien mettre le "/" devant le nom de la route lorsque l'on utilise l'attribut "routerLink" et que le chemin est ABSOLU !-->

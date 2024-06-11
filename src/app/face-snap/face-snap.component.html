@@ -1,0 +1,7 @@
+
+<!--Le paramettre "ngClass" (combiné à la directive du même nom importé dans le fichier ts) permet d'ajouter ou de retirer une classe (ici : "snapped") si la condition indiquée est remplie ou pas (ici : "userHasSnapped === true")-->
+<div class="face-snap-card">
+    <h2> {{faceSnap.title | uppercase}} </h2>
+
+    <button (click)="onViewSnapFace()">Voir la Snap Face</button>
+</div>

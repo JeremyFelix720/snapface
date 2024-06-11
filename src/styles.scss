@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: Roboto, Helvetica, sans-serif;
+  }
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+button {
+  background-color: gray;
+  color: lightgrey;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: none;
+  margin-top: 15px;
+  align-self: center;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+}

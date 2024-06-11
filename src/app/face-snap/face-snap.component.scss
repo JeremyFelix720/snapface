@@ -1,0 +1,48 @@
+.face-snap-card {
+    width: 300px;
+    padding: 10px;
+    background-color: lightgray;
+    box-shadow: gray 4px 4px 20px;
+    border-radius: 10px;
+    margin: 20px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    button {
+      font-size: 14px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .date {
+        font-size: 12px;
+        color: dimgray;
+    }
+  }
+
+.snapped { // Attention : il ne faut pas écrire les noms des classes en "snake" pour être utilisées dans une propriété "ngClass" !
+  background-color: lightgreen;
+  color: darkgreen;
+  button {
+    background-color: darkgreen;
+    color: lightgreen;
+  }
+  .date {
+    font-size: 12px;
+    color: mediumseagreen;
+  }
+}
+
+.popular {
+  border: 3px solid darkgreen;
+}

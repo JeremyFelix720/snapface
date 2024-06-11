@@ -1,0 +1,28 @@
+
+header {
+    background-color: lightgrey;
+    padding: 20px 30px;
+    text-align: center;
+    color: dimgray;
+
+    .principal-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        a {
+            margin: 0px 10px;
+            color: #333;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .active {
+            color: blueviolet;
+            text-decoration: underline;
+        }
+        
+    }
+}
